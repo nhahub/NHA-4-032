@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+.venv/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Large data files — store separately (Google Drive / Streamlit Files)
+model_final.pkl
+dubizzle_listings.xlsx
+URLs.xlsx
+cleaned_dubizzle_final.csv
+
+# Scraper checkpoint (auto-created during scraping)
+.checkpoint.csv
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Unzipped Pickle File
+model_final.pkl

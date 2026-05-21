@@ -1,0 +1,22 @@
+# Egypt Real Estate Appraiser — Scraper Dependencies
+# Install: pip install -r requirements_scraper.txt
+#
+# Stage 1  (dubizzle_scraper_stage1.py) — card-level scraper
+#   Uses: requests, beautifulsoup4, lxml, openpyxl, pandas
+#
+# Stage 2  (dubizzle_scraper.py) — detail page scraper
+#   Uses: aiohttp, beautifulsoup4, lxml, openpyxl
+#
+# Shared by both stages: beautifulsoup4, lxml, openpyxl, pandas
+
+# ── Stage 1 ───────────────────────────────────────────────────────────────────
+requests>=2.31.0        # synchronous HTTP for Stage 1 (sitemap + card pages)
+
+# ── Stage 2 ───────────────────────────────────────────────────────────────────
+aiohttp>=3.9.0          # async HTTP for Stage 2 (40 concurrent workers)
+
+# ── Shared ────────────────────────────────────────────────────────────────────
+beautifulsoup4>=4.12.0  # HTML parsing
+lxml>=5.0.0             # fast HTML parser backend for BeautifulSoup
+openpyxl>=3.1.0         # read/write Excel files (.xlsx)
+pandas>=2.0.0           # DataFrame + Excel save in Stage 1
